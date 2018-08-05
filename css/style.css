@@ -1,0 +1,282 @@
+html {
+    background:#667550;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
+    scroll-behavior: smooth; 
+    background: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+p:last-child {
+    margin-bottom: 8px;
+}
+
+a {
+    color: black;
+    font-weight: 700;
+}
+
+a:hover {
+    color: gray;
+}
+
+p a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c1  ";
+}
+
+nav {
+    background: #667550;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+nav > .container {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+nav a.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;    
+    text-decoration: none;
+}
+
+nav ul.navigation-items {
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+nav ul.navigation-items a,
+nav ul.navigation-items .active a:hover,
+.collapse-button {
+    padding: 10px 7px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: #667550;
+    color: white;
+}
+
+nav ul.navigation-items a:hover, 
+nav ul.navigation-items .active a,
+.collapse-button:hover {
+    background: white;
+    color: #667550;
+}
+
+
+@media all and (max-width: 1020px) {
+    nav > .container {
+        width: 95%;
+    }
+
+    nav {
+        background: #667550;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    nav #navigation:not(.show) {
+        display: none;
+    }
+
+    nav #navigation.show {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    nav #navigation.show .navigation-items {
+        margin-left: 0;
+        margin-bottom: 0;
+        padding-top: 12px;
+        padding-bottom: 0;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+    }
+
+    nav #navigation.show .navigation-items a {
+        display: block; 
+        padding: 10px 30px;
+        margin: auto -30px;
+        border-radius: 0;
+        border: 0;
+        width: 100%;
+        background: #667550;
+        color: white;
+    }
+
+    nav #navigation.show .navigation-items a:hover,
+    nav #navigation.show .navigation-items li.active a  {
+        background: whitesmoke;
+        color: black;
+    }
+
+    nav a.collapse-button {
+        padding: 10px 15px;
+    }
+
+    nav .collapse-button {
+        border: 1px solid white;
+    }
+
+    .container {
+        width: calc(100% - 22px);
+    }
+}
+
+@media all and (min-width: 1020px) {
+    nav ul .navigation-items li.item {
+        display: flex;
+    }
+
+    nav .collapse-button {
+        display: none;
+    }
+}
+
+.full-width-image {
+    background: #ffffff url("https://res.cloudinary.com/dewist/image/upload/f_auto,q_70,fl_lossy,w_1200,h_498,c_fill,e_unsharp_mask:90,fl_keep_iptc/v1520861772/content/2-wildtiere/19-igel/2-merkmale/2-geraeusche/steckbrief_igel_merkmale_gerausche_slider_2.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 60px;
+    min-height: 350px;
+}
+
+.content-container {
+    padding: 20px 16px;
+}
+
+.content-container .container {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+    min-height: 250px;
+}
+
+.content-container .container h1:first-child {
+    margin: 0.33em 0;
+}
+
+.content-container .container h1:first-child {
+    margin-top: 0;
+}
+
+#gallery {
+    padding: 20px 16px;
+}
+
+#gallery .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+#gallery img {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    max-width: 30%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Add a hover effect (blue shadow) */
+#gallery img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+@media all and (max-width: 1200px) {
+    #gallery img {
+        width: 45%;
+        max-width: 45%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    #gallery img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+footer {
+    background: #333333;
+    color: white;
+    padding: 16px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    order: 2;
+    text-align: center;
+    margin: 0;
+}
+
+footer .logo {
+    order: 1;
+    height: 200px;
+    width: auto;
+}
+
+footer .back-to-top {
+    order: 3;
+    text-decoration: none;
+    font-size: 40px;
+}
