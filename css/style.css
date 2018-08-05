@@ -9,6 +9,8 @@ body {
     z-index: 1;
     scroll-behavior: smooth; 
     background: white;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .container {
@@ -48,6 +50,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 12px;
+    border-bottom: solid 1px white;
 }
 
 nav > .container {
@@ -150,6 +153,10 @@ nav ul.navigation-items .active a,
         color: white;
     }
 
+    nav #navigation.show .navigation-items li:last-child a {
+        border-bottom: solid 1px white;
+    }
+
     nav #navigation.show .navigation-items a:hover,
     nav #navigation.show .navigation-items li.active a  {
         background: whitesmoke;
@@ -208,6 +215,10 @@ nav ul.navigation-items .active a,
     padding: 20px 16px;
 }
 
+#gallery .container {
+    width: calc(100% - 24px);
+}
+
 #gallery .images {
     display: flex;
     flex-direction: row;
@@ -220,8 +231,7 @@ nav ul.navigation-items .active a,
 #gallery img {
     border: 1px solid #ddd; /* Gray border */
     border-radius: 4px;  /* Rounded border */
-    padding: 5px; /* Some padding */
-    max-width: 30%;
+    width: 100%;
     height: auto;
     margin-top: 20px;
 }
@@ -231,24 +241,10 @@ nav ul.navigation-items .active a,
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-@media all and (max-width: 1200px) {
-    #gallery img {
-        width: 45%;
-        max-width: 45%;
-    }
-}
-
-@media all and (max-width: 800px) {
-    #gallery img {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
 footer {
     background: #333333;
     color: white;
-    padding: 16px 0;
+    padding: 20px 16px;
 }
 
 footer .container {
@@ -279,4 +275,10 @@ footer .back-to-top {
     order: 3;
     text-decoration: none;
     font-size: 40px;
+}
+
+@media all and (max-width: 1020px) {
+    footer p {
+        text-align: left;
+    }
 }
