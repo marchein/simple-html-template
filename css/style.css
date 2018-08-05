@@ -144,8 +144,8 @@ nav ul.navigation-items .active a,
 
     nav #navigation.show .navigation-items a {
         display: block; 
-        padding: 10px 30px;
-        margin: auto -30px;
+        padding: 10px 40px;
+        margin: -1px -40px;
         border-radius: 0;
         border: 0;
         width: 100%;
@@ -231,7 +231,7 @@ nav ul.navigation-items .active a,
 #gallery img {
     border: 1px solid #ddd; /* Gray border */
     border-radius: 4px;  /* Rounded border */
-    width: 100%;
+    width: 25%;
     height: auto;
     margin-top: 20px;
 }
